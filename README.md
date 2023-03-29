@@ -6,4 +6,4 @@ It was a software app (loaded via physical ROM modules/cartridges) running on an
 
 This is a virtualisation and visualisation of that device.
 
-Fonts from free web download, but not my work.
+Fonts from free web download (http://legionfonts.com/fonts/hp41-character-set), not my work.
