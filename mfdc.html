@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>Mortar Fire Data Control App</title>
+
+<script src="mfdc.js"></script>
+<link rel="stylesheet" type="text/css" href="mfdc.css">
+
+</head>
+
+<body onload="start()">
+<h1>A virtualisation and visualisation of how apps used to be, back-in-the-day (40 years ago)</h1>
+
+<p>The <a href="https://www.maszengrange.com/" target="_blank">Zengrange</a> Morzen <a href="http://www.hpcc.org/calculators/Morzen_Gunzen.pdf" target="_blank">
+Mortar Fire Direction Computer</a> was a handheld, ruggedised and weatherproof device issued
+to British Army <a href="https://en.wikipedia.org/wiki/81_mm_mortar#/media/File:81mm_L16_mortier.jpg" target="_blank">81mm mortar</a> platoons in the early 1980s.
+It was a software app (loaded via physical ROM modules/cartridges)
+running on an <a href="https://en.wikipedia.org/wiki/HP-41C" target="_blank">HP-41C</a> programmable pocket calculator.</p>
+
+<p>Meanwhile this was the calculator that NASA were using to do 
+<a href="https://airandspace.si.edu/collection-objects/calculator-hand-held-hp-41/nasm_A19890003000" target="_blank">calculations
+on the space shuttle</a>, including as the back-up during re-entry while it was cut off from the ground</p>
+
+<p>The MFDC functionality included the ability to program-in multiple preplanned mortar firing positions ("Mortar Lines", MLs) (grid and elevation);
+program multiple pre-planned target locations (grid, elevation); and to calculate required mortar settings (bearing, elevation, charge) to
+attack targets from a given mortar location, taking account of temperature and predicting time of flight.  It could 
+also calculate shots based on target bearing and range, rather than grids.</p>
+
+<p>It could run a countdown to a given <a href="https://history.army.mil/html/faq/ddayhhour.html" target="_blank">H-hour</a>,
+a countup after H-hour, and a countdown from mortar launch to splash.</p>
+
+<p>And it can do <a href="https://www.nwcg.gov/course/ffm/location/69-resection" target="_blank">resection</a>,
+whereby when you have identified a few landmarks on the map and taken their bearings, it will
+calculate your own grid location.</p>
+ 
+<p>It used <a href="https://en.wikipedia.org/wiki/Fourteen-segment_display" target="_blank">14-segment</a> LCD displays 
+meaning it <span class="calctext">COULD DISPLAY TEXT, NUMBERS AND CHARACTERS :-?</span></p>
+
+<p>And it could probably do other things I have yet to find out - it has a lot of buttons.</p>
+
+<p>There was a similar device for Artillery, up to and including the 
+<a href="https://en.wikipedia.org/wiki/MGM-52_Lance#/media/File:MGM-52_Lance.jpg" target="_blank">Lance missile</a></p>
+
+<div class="container">
+  <img src = "images/mfdc.webp" id="calc" width="540" alt = "This can't work without the picture" usemap = "#buttons">
+
+  <canvas id="myCanvas" width="540" height="1015"></canvas>
+  
+  <map name = "buttons">
+    <!-- Using href="#0" ensures we see an icon change when we pass over -->
+
+<area shape = "rect" coords = "10,140,110,220" onclick="On();" onmouseover="overOn();" onmouseout="outOn();" href = "#0" alt="On">
+<area shape = "rect" coords = "45,440,130,525" onclick="Shift();" onmouseover="overShift();" onmouseout="outShift();" href = "#0" alt="Shift">
+<area shape = "rect" coords = "230,530,315,615" onclick="Neg();" onmouseover="overNeg();" onmouseout="outNeg();" href = "#0" alt="Neg">
+<area shape = "rect" coords = "320,530,405,615" onclick="ML();" onmouseover="overML();" onmouseout="outML();" href = "#0" alt="ML">
+<area shape = "rect" coords = "45,263,130,348" onclick="Grid();" onmouseover="overGrid();" onmouseout="outGrid();" href = "#0" alt="Grid">
+<area shape = "rect" coords = "45,352,130,437" onclick="Tgts();" onmouseover="overTgts();" onmouseout="outTgts();" href = "#0" alt="Tgts">
+<area shape = "rect" coords = "135,352,220,437" onclick="Sfty();" onmouseover="overSfty();" onmouseout="outSfty();" href = "#0" alt="Sfty">
+<area shape = "rect" coords = "225,352,310,437" onclick="MLs();" onmouseover="overMLs();" onmouseout="outMLs();" href = "#0" alt="MLs">
+<area shape = "rect" coords = "405,440,490,525" onclick="Shot();" onmouseover="overShot();" onmouseout="outShot();" href = "#0" alt="Shot">
+<area shape = "rect" coords = "50,889,135,974" onclick="RESET();" onmouseover="overRESET();" onmouseout="outRESET();" href = "#0" alt="RESET">
+<area shape = "rect" coords = "405,530,490,615" onclick="Back();" onmouseover="overBack();" onmouseout="outBack();" href = "#0" alt="Back">
+<area shape = "rect" coords = "155,889,250,978" onclick="B0();" onmouseover="overB0();" onmouseout="outB0();" href = "#0" alt="B0">
+<area shape = "rect" coords = "155,800,250,889" onclick="B1();" onmouseover="overB1();" onmouseout="outB1();" href = "#0" alt="B1">
+<area shape = "rect" coords = "277,800,372,889" onclick="B2();" onmouseover="overB2();" onmouseout="outB2();" href = "#0" alt="B2">
+<area shape = "rect" coords = "399,800,494,889" onclick="B3();" onmouseover="overB3();" onmouseout="outB3();" href = "#0" alt="B3">
+<area shape = "rect" coords = "155,711,250,800" onclick="B4();" onmouseover="overB4();" onmouseout="outB4();" href = "#0" alt="B4">
+<area shape = "rect" coords = "277,711,372,800" onclick="B5();" onmouseover="overB5();" onmouseout="outB5();" href = "#0" alt="B5">
+<area shape = "rect" coords = "399,711,494,800" onclick="B6();" onmouseover="overB6();" onmouseout="outB6();" href = "#0" alt="B6">
+<area shape = "rect" coords = "155,622,250,711" onclick="B7();" onmouseover="overB7();" onmouseout="outB7();" href = "#0" alt="B7">
+<area shape = "rect" coords = "277,622,372,711" onclick="B8();" onmouseover="overB8();" onmouseout="outB8();" href = "#0" alt="B8">
+<area shape = "rect" coords = "399,622,494,711" onclick="B9();" onmouseover="overB9();" onmouseout="outB9();" href = "#0" alt="B9">
+<area shape = "rect" coords = "399,889,494,978" onclick="RUN();" onmouseover="overRUN();" onmouseout="outRUN();" href = "#0" alt="RUN">
+
+
+  </map>
+  <div id="display">
+    <div id="maintext" class="maintext">MK 4 NO ML</div>
+
+    <div class="user">USER</div>
+    <div class="shift" id="shift">SHIFT</div>
+    <div class="onetwo">12</div>
+  </div>
+  
+  <div>
+  
+  <div class="instruction">
+  
+  <h3>Simulation Instructions.</h3> 
+
+    <p>Turn on the device by clicking the ON/OFF button just under the left of the display</p>
+    <p>Not all functions are yet implemented.  Working buttons will be highlighted when the cursor passes over them.</p>
+    <p>The device will briefly flash up the identity of the ROM modules present (<span class="calctext">MFDC2-MDP38 225A-2F4B10A L16-L15(4/2)</span>) and then
+    display <span class="calctext">MK 4 NO ML</span> i.e. this is the Mark 4 version and no Mortar Line (location) has yet been set.</p>
+    <p>Click the RESECT (Resection) button.  This must be preceded by the shift (Diamond) key as it is a shifted function.  Device will display:
+    <span class="calctext">PT. 1 GRID?</span>i.e a request for the <a href="https://shavenraspberry.com/faq-items/more-about-6-8-figure-grid-references/" 
+    target="_blank">6 or 8 figure grid</a> of the first reference point (a landmark that you
+    can observe, and one for which you know its grid reference from a map.)  If RESECT displays 2, then the shift was not pressed - use RESET to return.</p>
+
+    <p>Using the example on p.150 of <a href="https://ia600205.us.archive.org/19/items/firearms_Mortar_Firing_Data_Instruments_for_Calculating_B-GL-385-015PT-001/Mortar_Firing_Data_Instruments_for_Calculating_B-GL-385-015PT-001.pdf"
+     target="_blank">
+    instructions for a similar Canadian device</a> we enter 16013955 as the 8 figure grid and press RUN. The device responds 
+    <span class="calctext">PT. 1 BRG?</span>requesting the bearing of Point 1 in mils (see p15 of 
+    <a href="https://bootcampmilitaryfitnessinstitute.com/wp-content/uploads/2018/02/Military-Map-Reading-v2.0-2010-12.pdf" target="_blank">
+    military map reading</a> to explain mils). We enter 2870 as per the example, then RUN.  We repeat for point 2 (GRID 16245213 BRG 1575),
+    but for Point 3 we simply press RUN.  Two points are enough to do a resection, although using a third could increase 
+    accuracy and avoid errors.  After a few seconds saying <span class="calctext">WORKING</span> the devices responds with the location (intersection)  
+    <span class="calctext">INT: 1183 5202</span> 
+    which effectively matches the example (which however states the more accurate 10 figure reference 11822 52022).</p>
+
+    <p>At this point selecting ML (another shifted function, and not to be confused with MLs) will have the device confirm this
+    is now the <span class="calctext">ACTIVE ML: 00</span> and then ask <span class="calctext">CH TMP 21C?</span>.  
+    This is asking to either change or confirm the default 21 degrees centigrade temperature.  Entering 18 RUN will reset to 18 degrees, 
+    simply entering RUN will keep the current temperature.
+    The display now reads <span class="calctext">ML 00 READY</span>.  We have set our own mortar location and the met. conditions.
+    For some reason if we set a ML directly, rather than from a resection, it also asks for an elevation.  It may be an error that it 
+    does not ask after a resection.</p>
+    
+    <p>Once a ML is set, using ML without the shift will show us its details, pressing RUN to page through all details.</p>
+
+    <p>Now let us select a target.  Say it is at grid 1403 5207 (which is in fact half way to point 2) and elevation -20 metres.  
+    Press GRID, and the device asks <span class="calctext">TGT GRID?</span>, respond 14035207 RUN.  It then
+    asks <span class="calctext">TGT ALT.?</span> so respond 20 +/- RUN.
+    The device says <span class="calctext">ML 00: HE/WPN</span> (apparently an High Explosive round as default) and then
+    <span class="calctext">BG: 1577 CH: 4</span>.  As expected for something half way to Point 2, this is the same
+    bearing as point 2.  CH appears to be the propellant charge to be used.  Pressing RUN again gets 
+    <span class="calctext">EL: 1258 T:37</span>.  The mortar should therefore
+    be set to an elevantion angle of 1258 mils, and the time of flight will be 37 seconds.  Selecting SHOT (at the moment the mortar is fired) will begin
+    a countdown until the display says <span class="calctext">SPLASH</span>.  It returns to displaying the 
+    mortar bearing and azimuth, which we could correct based on observed fall of shot.  However this functionality is not yet
+    implemented in this demonstrator.</p>
+    
+    <p>Entering TGT instead of GRID will store a target in a similar manner, without following through with the shot.</p>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+  background-color: #D2D282;
+  font-family: Arial;
+  font-size: 20px;
+  min-width:1200px;
+}
+
+img {
+  position: absolute;
+  left: 0%;
+  max-width: 40%;
+  height: auto;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  opacity: 0.0;
+}
+
+
+@font-face {
+  font-family: 'HP41C';
+  src: url('HP41 Character Set.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('HP41 Character Set.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+       
+/* Fonts courtesy of http://legionfonts.com/fonts/hp41-character-set */ 
+} 
+
+.container {
+  position: relative;
+  text-align: left;
+  color: black;  
+}
+
+.maintext {
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  font-family:'HP41C';
+  font-size: 40px;
+}
+.calctext {
+  font-family:'HP41C';
+  font-weight: bold;
+  font-size: 18px;
+}
+.user {
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  font-family:'Arial';
+  font-size: 12px;
+} 
+.shift {
+  position: absolute;
+  top: 100px;
+  left: 230px;
+  font-family:'Arial';
+  font-size: 12px;
+}  
+.onetwo {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  font-family:'Arial';
+  font-size: 12px;
+}  
+
+.instruction {
+  position: absolute;
+  top: 0px;
+  left: 560px;
+  width:800px;
+  height:1000px;
+  
+}
