@@ -115,29 +115,11 @@ ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
 }
-function overShift() {
+function overRESET() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(45,440,85,85);
-ctx.lineWidth=8;
-ctx.strokeStyle = '#ff0000';
-ctx.stroke();
-}
-function overNeg() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.rect(230,530,85,85);
-ctx.lineWidth=8;
-ctx.strokeStyle = '#ff0000';
-ctx.stroke();
-}
-function overML() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.rect(320,530,85,85);
+ctx.rect(42,888,87,86);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -146,7 +128,7 @@ function overGrid() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(45,263,85,85);
+ctx.rect(38,253,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -155,7 +137,7 @@ function overTgts() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(45,352,85,85);
+ctx.rect(38,344,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -164,7 +146,7 @@ function overSfty() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(135,352,85,85);
+ctx.rect(130,344,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -173,7 +155,16 @@ function overMLs() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(225,352,85,85);
+ctx.rect(222,344,90,89);
+ctx.lineWidth=8;
+ctx.strokeStyle = '#ff0000';
+ctx.stroke();
+}
+function overShift() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(38,435,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -182,16 +173,25 @@ function overShot() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(405,440,85,85);
+ctx.rect(406,435,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
 }
-function overRESET() {
+function overNeg() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(50,889,85,85);
+ctx.rect(222,526,90,89);
+ctx.lineWidth=8;
+ctx.strokeStyle = '#ff0000';
+ctx.stroke();
+}
+function overML() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(314,526,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -200,7 +200,7 @@ function overBack() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(405,530,85,85);
+ctx.rect(406,526,90,89);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -209,7 +209,7 @@ function overB0() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(155,889,95,89);
+ctx.rect(155,889,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -218,7 +218,7 @@ function overB1() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(155,800,95,89);
+ctx.rect(155,799,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -227,7 +227,7 @@ function overB2() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(277,800,95,89);
+ctx.rect(277,799,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -236,7 +236,7 @@ function overB3() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(399,800,95,89);
+ctx.rect(399,799,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -245,7 +245,7 @@ function overB4() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(155,711,95,89);
+ctx.rect(155,709,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -254,7 +254,7 @@ function overB5() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(277,711,95,89);
+ctx.rect(277,709,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -263,7 +263,7 @@ function overB6() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(399,711,95,89);
+ctx.rect(399,709,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -272,7 +272,7 @@ function overB7() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(155,622,95,89);
+ctx.rect(155,619,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -281,7 +281,7 @@ function overB8() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(277,622,95,89);
+ctx.rect(277,619,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -290,7 +290,7 @@ function overB9() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(399,622,95,89);
+ctx.rect(399,619,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -299,7 +299,7 @@ function overRUN() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.rect(399,889,95,89);
+ctx.rect(399,889,95,90);
 ctx.lineWidth=8;
 ctx.strokeStyle = '#ff0000';
 ctx.stroke();
@@ -310,130 +310,130 @@ var ctx = c.getContext("2d");
 ctx.clearRect(10,140,100,80);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
-function outShift() {
+function outRESET() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(45,440,85,85);
-ctx.drawImage(img,offsetX,offsetY,540,1000);
-}
-function outNeg() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.clearRect(230,530,85,85);
-ctx.drawImage(img,offsetX,offsetY,540,1000);
-}
-function outML() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.clearRect(320,530,85,85);
+ctx.clearRect(42,888,87,86);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outGrid() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(45,263,85,85);
+ctx.clearRect(38,253,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outTgts() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(45,352,85,85);
+ctx.clearRect(38,344,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outSfty() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(135,352,85,85);
+ctx.clearRect(130,344,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outMLs() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(225,352,85,85);
+ctx.clearRect(222,344,90,89);
+ctx.drawImage(img,offsetX,offsetY,540,1000);
+}
+function outShift() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.clearRect(38,435,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outShot() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(405,440,85,85);
+ctx.clearRect(406,435,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
-function outRESET() {
+function outNeg() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(50,889,85,85);
+ctx.clearRect(222,526,90,89);
+ctx.drawImage(img,offsetX,offsetY,540,1000);
+}
+function outML() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.clearRect(314,526,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outBack() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(405,530,85,85);
+ctx.clearRect(406,526,90,89);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB0() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(155,889,95,89);
+ctx.clearRect(155,889,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB1() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(155,800,95,89);
+ctx.clearRect(155,799,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB2() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(277,800,95,89);
+ctx.clearRect(277,799,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB3() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(399,800,95,89);
+ctx.clearRect(399,799,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB4() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(155,711,95,89);
+ctx.clearRect(155,709,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB5() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(277,711,95,89);
+ctx.clearRect(277,709,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB6() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(399,711,95,89);
+ctx.clearRect(399,709,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB7() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(155,622,95,89);
+ctx.clearRect(155,619,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB8() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(277,622,95,89);
+ctx.clearRect(277,619,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outB9() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(399,622,95,89);
+ctx.clearRect(399,619,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 function outRUN() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(399,889,95,89);
+ctx.clearRect(399,889,95,90);
 ctx.drawImage(img,offsetX,offsetY,540,1000);
 }
 //-----------------------END AUTOGEN -------------------------------
