@@ -58,10 +58,18 @@ img {
   font-family:'Arial';
   font-size: 12px;
 }  
-.onetwo {
+.one {
   position: absolute;
   top: 100px;
   left: 300px;
+  font-family:'Arial';
+  font-size: 12px;
+}  
+
+.two {
+  position: absolute;
+  top: 100px;
+  left: 308px;
   font-family:'Arial';
   font-size: 12px;
 }  
